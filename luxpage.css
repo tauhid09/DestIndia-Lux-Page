@@ -6,7 +6,6 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -86,6 +85,10 @@ nav {
     outline: none;
 }
 
+.search input::placeholder {
+    font-family: "GFS Didot", serif;
+}
+
 .down-nav button {
     display: flex;
     gap: 5px;
@@ -137,9 +140,7 @@ nav {
     width: 250px;
     height: 99%;
 }
-body{
-    font: "DM";
-}
+
 
 .box h1 {
     margin-top: 5px;
@@ -214,6 +215,7 @@ body{
     justify-content: space-between;
     scrollbar-width: thin;
     scrollbar-color: #ffffff #a43d12;
+    white-space: nowrap;
 }
 
 .sale-offer::-webkit-scrollbar {
@@ -244,6 +246,7 @@ body{
 }
 
 .sale {
+    display: inline-block;
     box-shadow: black;
     position: relative;
     width: 317px;
@@ -289,16 +292,10 @@ body{
 
 .third-banner {
     width: 100%;
-    height: 100px;
+    height: 99px;
     display: flex;
-    animation: banner-move 20s infinite;
 }
 
-@keyframes banner-move {
-    0% {
-        transform: translateX(-100%);
-    }
-}
 
 .fourth-banner {
     width: 99%;
@@ -442,13 +439,13 @@ body{
     padding: 20px 20px;
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(5,300px);
+    grid-template-columns: repeat(5, 300px);
     grid-template-rows: 490px;
     grid-template-areas: "cards-1 cards-2 cards-3 cards-4 cards-5";
     gap: 15px;
 }
 
-.favorite{
+.favorite {
     width: 25px;
     height: 25px;
     z-index: 3;
@@ -495,11 +492,13 @@ body{
     color: #333;
     font-size: "Poppins", sans-serif;
 }
-.product-price-info{
+
+.product-price-info {
     display: flex;
     align-items: center;
     font-size: "Poppins", sans-serif;
 }
+
 .product-price {
     font-size: 18px;
     font-weight: 700;
@@ -524,7 +523,8 @@ body{
     font-weight: 600;
     font-size: "Poppins", sans-serif;
 }
-.seventh-banner{
+
+.seventh-banner {
     width: 100%;
     height: 426px;
     background-image: url('images/Banner/banner-7.svg');
@@ -532,7 +532,8 @@ body{
     background-size: cover;
     cursor: pointer;
 }
-.eigth-banner{
+
+.eigth-banner {
     width: 100%;
     height: 142px;
     background-image: url('images/Banner/Banner-2.svg');
@@ -597,7 +598,7 @@ footer {
 }
 
 .app-store-btn {
-    height: 55px;
+    height: 41px;
     width: auto;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -677,9 +678,10 @@ footer {
     gap: 12px;
 }
 
-.social-links a img{
+.social-links a img {
     width: 20px;
 }
+
 .social-link {
     display: flex;
     align-items: center;
@@ -692,9 +694,11 @@ footer {
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
-.stay-connected{
+
+.stay-connected {
     width: 200px;
 }
+
 .social-link:hover {
     background-color: #555;
 }
@@ -716,4 +720,480 @@ footer {
 
 .footer-section ul li a:hover {
     color: white;
+}
+
+
+@media (max-width: 1440px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        width: 1440px;
+    }
+
+    .card-brand {
+        gap: 1.5rem;
+    }
+
+    .third-banner {
+        width: 1440px;
+        height: 84px;
+    }
+
+    .card-fashion {
+        grid-template-columns: repeat(5, 269px);
+    }
+}
+
+@media (max-width:1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        width: 1024px;
+    }
+
+    .category-section {
+        width: 94%;
+        gap: 46px;
+    }
+    .header-banner{
+        height: 233px;
+    }
+
+    .third-banner {
+        width: 1024px;
+        height: 60px;
+    }
+
+    .box h1 {
+        /* width: 190px; */
+        font-size: 15px;
+    }
+
+    .sale-offer {
+        width: 86%;
+    }
+
+    .popular-brand {
+        height: auto;
+    }
+
+    .card-brand {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        grid-template-areas:
+            "card-1 card-2 card-3"
+            "card-4 card-5 .";
+        gap: 20px;
+    }
+
+    .card-fashion {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "cards-1 cards-2 cards-3"
+            "cards-4 cards-5 .";
+        gap: 20px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 768px;
+    }
+
+    #destindia-logo {
+        display: none;
+    }
+
+    .card-brand {
+        height: auto;
+    }
+
+    .card-brand {
+        grid-template-rows: repeat(2, 350px);
+    }
+
+    .card-fashion {
+        grid-template-rows: repeat(2, 330px);
+    }
+
+    .card-fan img {
+        height: 220px;
+        object-fit: contain;
+        object-position: top;
+    }
+
+    .product-title,
+    .product-des,
+    .product-price,
+    .discount {
+        font-size: 11px;
+    }
+
+    .header-banner,
+    .seventh-banner {
+        height: 200px;
+    }
+
+    .third-banner {
+        width: 768px;
+        height: 45px;
+    }
+
+    .fifth-banner img {
+        height: 140px;
+    }
+
+    .sixth-banner {
+        height: 180px;
+    }
+
+    .second-banner,
+    .eigth-banner,
+    .fourth-banner {
+        height: 70px;
+    }
+
+    .down-nav {
+        padding: 5px;
+    }
+
+    .category-section {
+        width: 97%;
+    }
+
+    .newsletter {
+        width: 180px;
+    }
+
+    .logo,
+    .app-downloads {
+        display: none;
+    }
+
+    .offer,
+    .sale img {
+        width: 191px;
+        height: 250px;
+    }
+
+    .sale img {
+        top: 9%;
+        right: -9%;
+    }
+
+    .sale-offer {
+        width: 101%;
+        gap: 78px;
+    }
+}
+
+@media (max-width: 426px) {
+    nav {
+        width: 424px;
+    }
+
+    .upper-nav ul {
+        justify-content: center;
+    }
+
+    .down-nav button {
+        display: none;
+    }
+
+    .category-section {
+        width: 82%;
+    }
+
+    .sale-offer {
+        gap: 20px;
+    }
+
+    .search img {
+        width: 20px;
+    }
+
+    .search {
+        width: 253px;
+        height: 25px;
+    }
+
+    .search input {
+        width: 190px;
+        height: 20px;
+    }
+
+    .search input::placeholder {
+        font-size: 14px;
+    }
+
+    #search-icon {
+        justify-self: right;
+    }
+
+    .header-banner {
+        height: 100px;
+
+    }
+
+    .second-banner,
+    .eigth-banner {
+        height: 47px;
+    }
+
+    .third-banner {
+        width: 768px;
+        height: 25px;
+    }
+
+    .fourth-banner {
+        height: 35px;
+    }
+
+    .sale-offer {
+        height: 320px;
+    }
+
+    .popular-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-brand {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 250px 250px 250px;
+        grid-template-areas:
+            "card-1 card-2"
+            "card-3 card-4"
+            "card-5 .";
+        gap: 15px;
+    }
+
+    .card img {
+        width: 150px;
+    }
+
+    .luxary-product {
+        align-items: start;
+        justify-content: start;
+        height: 300px;
+    }
+
+    .luxary-product h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .fifth-banner,
+    .sixth-banner {
+        height: 75px;
+    }
+
+    .card-fashion {
+        grid-template-columns: 195px 195px;
+        grid-template-rows: 250px 250px 250px;
+        grid-template-areas:
+            "cards-1 cards-2"
+            "cards-3 cards-4"
+            "cards-5 .";
+        gap: 15px;
+    }
+
+    .card-fan img {
+        height: 150px;
+    }
+
+    .footer-section .logo {
+        display: none;
+    }
+
+    .footer-section {
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 376px) {
+    nav {
+        width: 375px;
+    }
+
+    .offer,
+    .sale img {
+        width: 161px;
+        height: 250px;
+    }
+
+    .luxury-sale {
+        height: 418px;
+    }
+
+    .third-banner {
+        height: 22px;
+    }
+
+    .fourth-banner {
+        margin: 0 2px;
+        width: 373px;
+        height: 25px;
+    }
+
+    .card-brand {
+        grid-template-columns: 160px 160px;
+        grid-template-rows: 250px 250px 250px;
+        grid-template-areas:
+            "card-1 card-2"
+            "card-3 card-4"
+            "card-5 .";
+        gap: 15px;
+    }
+
+    .card img {
+        width: 130px;
+    }
+
+    .card h1 {
+        font-size: 14px;
+        margin: 10px 2px;
+    }
+
+    .card-fashion {
+        grid-template-columns: 160px 160px;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-areas:
+            "cards-1 cards-2"
+            "cards-3 cards-4"
+            "cards-5 ";
+        gap: 10px;
+    }
+
+    .card-fan img {
+        height: 120px;
+    }
+
+    .product-info {
+        padding: 5px;
+    }
+
+    .product-title,
+    .product-des,
+    .product-price,
+    .discount {
+        font-size: 8px;
+    }
+
+    .fashion h1 {
+        font-size: 33px;
+
+    }
+
+    .seventh-banner {
+        height: 100px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer-section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    nav {
+        width: 320px;
+    }
+
+    .upper-nav {
+        font-size: 15px;
+    }
+
+    .search {
+        width: 249px;
+        height: 25px;
+    }
+
+    .down-nav {
+        gap: 15px;
+    }
+
+    .category-section {
+        justify-content: baseline;
+        gap: 5px;
+    }
+
+    .polygon {
+        width: 90px;
+    }
+
+    .images {
+        width: 115px;
+        top: 23%;
+    }
+
+    .offer,
+    .sale img {
+        width: 134px;
+        height: 194px;
+    }
+
+    .sale img {
+        top: 30%;
+        right: -11%;
+    }
+
+    .fourth-banner {
+        width: 320px;
+        height: 30px;
+    }
+
+    .third-banner {
+        height: 18px;
+    }
+
+    .card-brand {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 235px 235px 235px;
+        grid-template-areas:
+            "card-1 card-2"
+            "card-3 card-4"
+            "card-5 .";
+        gap: 15px;
+    }
+
+    .card img {
+        width: 110px;
+    }
+
+    .luxary-product h1 {
+        font-size: 25px;
+    }
+
+    .card-fashion {
+        grid-template-columns: 140px 140px;
+        grid-template-rows: 180px 180px 180px;
+        grid-template-areas:
+            "cards-1 cards-2"
+            "cards-3 cards-4"
+            "cards-5 ";
+        gap: 10px;
+    }
+
+    .card-fan img {
+        height: 120px;
+    }
 }
