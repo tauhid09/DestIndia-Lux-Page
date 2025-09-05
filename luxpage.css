@@ -731,7 +731,8 @@ footer {
     }
 
     nav {
-        width: 1440px;
+        width: 100;
+        max-width: 1440px;
     }
 
     .card-brand {
@@ -754,7 +755,8 @@ footer {
     }
 
     nav {
-        width: 1024px;
+        width: 100%;
+        max-width:1024px;
     }
 
     .category-section {
@@ -809,7 +811,8 @@ footer {
 
 @media (max-width: 768px) {
     nav {
-        width: 768px;
+        width: 100%;
+        max-width: 768px;
     }
 
     #destindia-logo {
@@ -901,7 +904,8 @@ footer {
 
 @media (max-width: 426px) {
     nav {
-        width: 424px;
+        width: 100%;
+        max-width: 426px;
     }
 
     .upper-nav ul {
@@ -1041,7 +1045,8 @@ footer {
 
 @media (max-width: 376px) {
     nav {
-        width: 375px;
+        width: 100%;
+        max-width: 376px;
     }
 
     .offer,
@@ -1122,7 +1127,8 @@ footer {
 
 @media (max-width: 320px) {
     nav {
-        width: 320px;
+       width: 100%;
+       max-width: 320px;
     }
 
     .upper-nav {
