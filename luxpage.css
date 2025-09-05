@@ -761,7 +761,8 @@ footer {
         width: 94%;
         gap: 46px;
     }
-    .header-banner{
+
+    .header-banner {
         height: 233px;
     }
 
@@ -917,6 +918,7 @@ footer {
 
     .sale-offer {
         gap: 20px;
+        padding: 0 10px;
     }
 
     .search img {
@@ -999,6 +1001,7 @@ footer {
     }
 
     .card-fashion {
+        padding: 20px 10px;
         grid-template-columns: 195px 195px;
         grid-template-rows: 250px 250px 250px;
         grid-template-areas:
@@ -1018,6 +1021,21 @@ footer {
 
     .footer-section {
         font-size: 5px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer-section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -1099,20 +1117,7 @@ footer {
         height: 100px;
     }
 
-    .footer-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 
-    .footer-section {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 @media (max-width: 320px) {
