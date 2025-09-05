@@ -8,6 +8,14 @@ body {
     overflow-x: hidden;
 }
 
+img,
+.banner,
+.card,
+.sale img {
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     width: 100%;
     height: auto;
@@ -286,9 +294,9 @@ nav {
     position: absolute;
     z-index: 1;
     top: 0%;
-    right: -23%;
-    width: 237px;
-    height: 277px;
+    right: 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .third-banner {
@@ -331,7 +339,7 @@ nav {
     gap: 2rem;
     justify-content: space-around;
     /* flex-direction: column; */
-    grid-template-columns: repeat(5, 265px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 368px;
     grid-template-areas: "card-1 card-2 card-3 card-4 card-5";
 }
@@ -440,7 +448,7 @@ nav {
     padding: 20px 20px;
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(5, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 490px;
     grid-template-areas: "cards-1 cards-2 cards-3 cards-4 cards-5";
     gap: 15px;
@@ -731,7 +739,7 @@ footer {
     }
 
     nav {
-        width: 100;
+        width: 100%;
         max-width: 1440px;
     }
 
@@ -740,7 +748,8 @@ footer {
     }
 
     .third-banner {
-        width: 1440px;
+        width: 100%;
+        max-width: 1440px;
         height: 84px;
     }
 
@@ -756,7 +765,7 @@ footer {
 
     nav {
         width: 100%;
-        max-width:1024px;
+        max-width: 1024px;
     }
 
     .category-section {
@@ -963,7 +972,9 @@ footer {
     }
 
     .fourth-banner {
-        height: 35px;
+        width: 100%;
+        max-width: 426px;
+        /* height: 35px; */
     }
 
     .sale-offer {
@@ -1065,7 +1076,8 @@ footer {
 
     .fourth-banner {
         margin: 0 2px;
-        width: 373px;
+        width: 100%;
+        max-width: 100%;
         height: 25px;
     }
 
@@ -1127,8 +1139,8 @@ footer {
 
 @media (max-width: 320px) {
     nav {
-       width: 100%;
-       max-width: 320px;
+        width: 100%;
+        max-width: 320px;
     }
 
     .upper-nav {
@@ -1170,7 +1182,8 @@ footer {
     }
 
     .fourth-banner {
-        width: 320px;
+        width: 100%;
+        max-width: 100%;
         height: 30px;
     }
 
